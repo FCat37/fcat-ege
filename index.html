@@ -6,6 +6,7 @@
 <title>Подготовка к ЕГЭ по информатике — индивидуальные онлайн-занятия</title>
 <meta name="description" content="Индивидуальная и групповая подготовка к ЕГЭ по информатике онлайн. Диагностика пробелов, разбор всего кодификатора, первое занятие бесплатно.">
 <link rel="canonical" href="https://fcat-ege.ru/">
+<meta name="google-site-verification" content="5wOTlFDofovMMtVhraQbs2oEbLkcNqfGbEWq1iMn6mc" />
 
 <!-- favicon -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -558,15 +559,13 @@
 </footer>
 
 <script>
-  // Scroll reveal
+
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.15});
   revealEls.forEach(el=>io.observe(el));
 
-  // Отправка заявки через Cloudflare Worker.
-  // Токен бота хранится ТОЛЬКО в переменных Worker'а, не здесь и не в репозитории на GitHub.
   const WORKER_URL = "https://ЗАМЕНИТЕ-НА-ВАШ-АДРЕС.workers.dev";
 
   const form = document.getElementById("leadForm");
