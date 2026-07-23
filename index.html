@@ -222,8 +222,16 @@
   .topic-card h3{font-size:16px; margin-bottom:6px; font-weight:600; font-family:var(--body);}
   .topic-card p{font-size:13.5px; color:var(--ink-soft);}
 
-  .trial-banner{
+  .discount-banner{
     display:flex; align-items:flex-start; gap:16px; margin-top:28px;
+    background:var(--gap-soft); border:1px solid #F0C4C4; border-radius:16px; padding:20px 24px;
+  }
+  .discount-icon{font-size:26px; line-height:1;}
+  .discount-banner strong{display:block; font-size:16.5px; color:var(--ink); margin-bottom:4px;}
+  .discount-banner p{font-size:14px; color:var(--ink-soft); max-width:560px;}
+
+  .trial-banner{
+    display:flex; align-items:flex-start; gap:16px; margin-top:16px;
     background:var(--ok-soft); border:1px solid #BFE3CE; border-radius:16px; padding:20px 24px;
   }
   .trial-icon{font-size:26px; line-height:1;}
@@ -238,6 +246,10 @@
   .price-card.featured{border-color:var(--ink); box-shadow:0 10px 30px rgba(24,38,71,.08);}
   .price-card h3{font-size:17px; margin-bottom:8px; font-family:var(--body); font-weight:600;}
   .price-card .price{font-family:var(--display); font-size:32px; font-weight:700; margin:12px 0 18px;}
+  .price-card .price .old-price{
+    font-family:var(--body); font-size:17px; font-weight:400; color:var(--ink-soft);
+    text-decoration:line-through; margin-right:10px; display:inline-block;
+  }
   .price-card .price span{font-size:14px; color:var(--ink-soft); font-family:var(--body); font-weight:400;}
   .price-card ul{list-style:none; font-size:14px; color:var(--ink-soft); margin-bottom:24px; flex:1;}
   .price-card li{padding:6px 0; padding-left:18px; position:relative;}
@@ -475,6 +487,14 @@
     <div class="eyebrow">формат и стоимость</div>
     <h2 class="section-title">Индивидуально или в группе — онлайн, гибкий график</h2>
 
+    <div class="discount-banner reveal">
+      <div class="discount-icon">🔥</div>
+      <div>
+        <strong>Скидка 15% на все форматы — до 1 сентября</strong>
+        <p>Успейте записаться по старой цене до начала учебного года.</p>
+      </div>
+    </div>
+
     <div class="trial-banner reveal">
       <div>
         <strong>Первое занятие — бесплатно</strong>
@@ -485,43 +505,47 @@
     <div class="price-grid">
       <div class="price-card reveal">
         <h3>Разовое занятие</h3>
-        <div class="price">1 500 ₽<span>/60 мин</span></div>
+        <div class="price"><span class="old-price">1 500 ₽</span>1 275 ₽<span>/60 мин</span></div>
         <ul>
           <li>Занятие по видеосвязи</li>
-          <li>Разбор конкретной темы</li>
-          <li>Домашнее задание с проверкой</li>
+          <li>Тему выбираете сами — разбираем то, что важно именно сейчас</li>
+          <li>Домашнее задание с проверкой и разбором ошибок</li>
+          <li>Можно продолжить в любом другом формате позже</li>
         </ul>
         <a href="#contact" class="btn btn-secondary">Записаться</a>
       </div>
       <div class="price-card featured reveal">
         <span class="badge">чаще всего выбирают</span>
         <h3>Пакет на месяц</h3>
-        <div class="price">5 400 ₽<span>/4 занятия</span></div>
+        <div class="price"><span class="old-price">5 400 ₽</span>4 590 ₽<span>/4 занятия</span></div>
         <ul>
-          <li>Диагностика и индивидуальный план</li>
-          <li>4 занятия по 60 минут</li>
-          <li>Проверка домашних заданий в течение недели</li>
-          <li>Один пробный вариант ЕГЭ</li>
+          <li>Диагностика и индивидуальный план на старте</li>
+          <li>4 занятия по 60 минут в удобном для вас темпе</li>
+          <li>Проверка домашних заданий в течение недели с комментариями</li>
+          <li>Один пробный вариант ЕГЭ в течение месяца</li>
+          <li>Можно писать вопросы в Telegram между занятиями</li>
         </ul>
         <a href="#contact" class="btn btn-primary">Записаться</a>
       </div>
       <div class="price-card reveal">
         <h3>Групповые занятия</h3>
-        <div class="price">от 800 ₽<span>/чел. за занятие</span></div>
+        <div class="price"><span class="old-price">от 800 ₽</span>от 680 ₽<span>/чел. за занятие</span></div>
         <ul>
-          <li>Группы 2–4 человека</li>
-          <li>Подбираем участников с похожим уровнем</li>
-          <li>Более доступный формат подготовки</li>
+          <li>Группы 2–4 человека с похожим уровнем</li>
+          <li>Видите чужие вопросы и ошибки — это тоже учит</li>
+          <li>Более доступная цена за счёт разделения времени занятия</li>
+          <li>Можно перейти на индивидуальный формат в любой момент</li>
         </ul>
         <a href="#contact" class="btn btn-secondary">Записаться</a>
       </div>
       <div class="price-card reveal">
         <h3>Интенсив перед экзаменом</h3>
-        <div class="price">по запросу</div>
+        <div class="price">по запросу<span>скидка 15% действует</span></div>
         <ul>
-          <li>Плотный график занятий</li>
+          <li>Плотный график занятий перед экзаменом</li>
           <li>Упор на пробелы и часть 2</li>
           <li>Точечная практика по формату ЕГЭ</li>
+          <li>График и стоимость обсуждаем на бесплатной консультации</li>
         </ul>
         <a href="#contact" class="btn btn-secondary">Обсудить</a>
       </div>
